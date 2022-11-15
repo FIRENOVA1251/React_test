@@ -30,20 +30,7 @@ function Display(props) {
                     <img width={250} height={250} src = {data}/>
                 }
             </div>
-            {/* <div>
-                {data.substring(data.length - 3, data.length) == 'mp4' ?
-                    <Player
-                        playsInline
-                        fluid={false}
-                        width={250}
-                        height={250}
-                        src = {data}
-                        
-                    />
-                    : 
-                    <img width={250} height={250} src = {data}/>
-                }
-            </div> */}
+         
         </div>
         
     )

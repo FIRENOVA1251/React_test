@@ -1,4 +1,3 @@
-
 import './App.css';
 import React, { useState } from "react";
 import Display from './Display.js';
@@ -8,7 +7,6 @@ function App() {
   
   const [display, setDisplay] = useState([]);
 
-  
 
   const aa = () => {
     setDisplay(display.concat(<Display key={display.length} />));
@@ -18,17 +16,24 @@ function App() {
     <div className="App">
 
       <button onClick={aa}> here</button>
-      <div>
-        {display}
+      <div className = "column">
+        <div className = "row">
+          {display}
+          {display}
+          {display}
+          {display}
+
+        </div>
+
+        <div className = "row">
+          {display}
+          {display}
+          {display}
+          {display}
+
+        </div>
 
       </div>
-      {display}
-      
-      
-
-
-
-
     </div>
   );
 }
