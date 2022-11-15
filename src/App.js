@@ -1,31 +1,34 @@
-import logo from './logo.svg';
+
 import './App.css';
-import React, {Component} from 'react';
-//import Image from 'react-native';
+import React, { useState } from "react";
+import Display from './Display.js';
+
 
 function App() {
-  const dUrl = "https://random.dog/woof.json";
-  const url = fetch(dUrl).then(res => res.json);
-  console.log(dUrl);
+  
+  const [display, setDisplay] = useState([]);
 
+  
+
+  const aa = () => {
+    setDisplay(display.concat(<Display key={display.length} />));
+  }
+  
   return (
     <div className="App">
-      <img source = {{dUrl}} />
-      <a>{dUrl}</a>
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      <button onClick={aa}> here</button>
+      <div>
+        {display}
+
+      </div>
+      {display}
+      
+      
+
+
+
+
     </div>
   );
 }
