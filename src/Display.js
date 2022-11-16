@@ -4,8 +4,8 @@ import { Player } from 'video-react';
 
 function Display(props) {
 
+    {/* Fetch data from API. */}
     const [data, setData] = useState("");
-
     useEffect(() => {
         (async () => {
         const response = await fetch("https://random.dog/woof.json");
@@ -17,6 +17,7 @@ function Display(props) {
     return(
         <div>
             <div>
+                {/* Identify it is mp4 file or not. */}
                 {data.substring(data.length - 3, data.length) == 'mp4' ?
                     <Player
                         playsInline
@@ -24,8 +25,8 @@ function Display(props) {
                         width={250}
                         height={250}
                         src = {data}
-                        
-                    />
+                        />
+
                     : 
                     <img width={250} height={250} src = {data}/>
                 }

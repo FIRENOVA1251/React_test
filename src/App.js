@@ -6,8 +6,6 @@ import Display from './Display.js';
 function App() {
   
   const [display, setDisplay] = useState([]);
-
-
   const aa = () => {
     setDisplay(display.concat(<Display key={display.length} />));
   }
@@ -15,7 +13,8 @@ function App() {
   return (
     <div className="App">
 
-      <button onClick={aa}> here</button>
+      {/* Display the content of the website. */}
+      <button onClick={aa}> ADD </button>
       <div className = "column">
         <div className = "row">
           {display}
@@ -32,7 +31,6 @@ function App() {
           {display}
 
         </div>
-
       </div>
     </div>
   );

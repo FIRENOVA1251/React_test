@@ -40,18 +40,16 @@
 .column{
   display: flex;
   flex-wrap: wrap;
-
+  margin-inline-start: 50px;
 }
 
 .row{
   display: flex;
   flex-wrap: wrap;
   flex: 1 1 20%;
- 
 }
 
 .row > div {
-  
   height: 250px;
   width: 250px;
   margin: 10px;
